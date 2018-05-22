@@ -1,0 +1,112 @@
+.header
+  position: sticky
+  width: 100%
+  padding: 19px
+  background-color: $bgColor
+  z-index: 10
+  &-body
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    +r(lg)
+      justify-content: space-between
+      flex-wrap: wrap
+    &__nav
+    &__icon
+      margin-right: 55px
+      .fa-home
+        color: $darkTextColor
+.header-body__nav  
+  +r(lg)
+    width: 100%
+    overflow: hidden
+    transition: all .5s
+    max-height: 0  
+
+.header-nav
+  display: flex
+  +r(lg)
+    flex-direction: column
+    height: 80vh
+    padding: 10vh 0
+  &__item
+    position: relative
+    margin-right: 50px
+    text-transform: uppercase
+    +rfs(14px)
+    line-height: 1.2
+    &:last-child
+      margin-right: 0
+    &:before
+      content: ''
+      position: absolute
+      width: 1px
+      height: 100%
+      left: -25px
+      background-color: $mainTextColor
+      +rfs(20px)
+      text-align: center
+      +r(lg)
+        display: none
+.header-nav__item
+  +r(lg)
+    +rfs(40px) 
+    margin-right: 0
+
+.header-burger
+	background: none
+	border: none
+	display: none
+	flex-direction: column
+	align-items: center
+	justify-content: space-between
+	width: 30px
+	height: 18px
+	position: relative
+	transition: all .4s
+	+r(lg)
+		display: flex
+	
+	&__line
+		display: inline-block
+		width: 30px
+		height: 2px
+		background: $darkTextColor
+		border-radius: 3px 
+
+
+.mask
+	display: inline-block
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background: #FFF
+	z-index: 1 
+	transition: all .4s
+	opacity: 0
+	transform: translateY(-100%)
+	&.is-active
+		opacity: 0.95
+		transform: translateY(0)
+		
+
+//is-active MENU
+.header-body.is-active
+	.header-burger
+		.header-burger__line
+			transition: all .4s
+			&:nth-of-type(2)
+				background: $bgColor
+			&:first-child
+				transform: rotate(45deg) translateY(10px)
+			&:last-child
+				transform: rotate(-45deg) translateY(-10px)
+
+	.header-body__nav
+		+r(lg)
+			max-height: 100vh
+			transition: all .2s
+

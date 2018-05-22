@@ -1,0 +1,50 @@
+.btn
+  padding: 25px 63px
+  +rfs(16px)
+  color: #ffffff
+  text-transform: uppercase
+  font-weight: bold
+  background-color: $buttonColor
+  +r(xxs)
+    padding: 25px 35px
+
+
+.section-title
+  position: relative
+  text-align: center
+  font-weight: bold
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    width: 251px
+    height: 97px
+    background: url(../../img/content/title_bg_1.png) no-repeat center
+  &:after
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    width: 111px
+    height: 2px
+    background-color: #a7a99a
+    bottom: -42px
+  &__subtitle
+    +rfs(14px)
+    text-transform: uppercase
+    margin-bottom: 15px
+  &__title
+    +rfs(35px)
+    color: $darkTextColor
+
+.section-title__white
+  background: none
+  color: #fff
+  &:before
+    background: url(../../img/content/title_bg_white.png) no-repeat center
+    z-index: 1
+  .section-title__title
+    color: #fff
+
+

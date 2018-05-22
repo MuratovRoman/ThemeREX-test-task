@@ -1,0 +1,136 @@
+.footer
+  position: relative
+  padding: 125px 0 40px
+  text-align: center
+  +r(xs)
+    padding-top: 75px
+  &-arrow__top
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: -20px
+    +rfs(18px)
+    text-align: center
+    a
+      display: block
+    span
+      +rfs(12)
+      font-weight: bold
+      text-transform: uppercase
+    &:after
+      content: ''
+      position: absolute
+      background-color: #fff
+      width: 120px
+      height: 120px
+      border-radius: 50%
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -55px
+      z-index: -1
+  &-content
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    &__copyright
+      +rfs(14px)
+      color: $lightGreyText
+      a
+        text-decoration: underline
+        color: $lightGreyText
+
+.footer-contact
+  +r(lg)
+    justify-content: space-around
+  +r(xxs)
+    flex-direction: column
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  font-weight: bold
+  text-transform: uppercase
+  +rfs(14px)
+  margin-bottom: 70px
+
+.footer-info
+  +r(lg)
+    margin-right: 0
+  +r(sm)
+    order: 2
+  +r(xxs)
+    align-items: center
+    margin-bottom: 20px
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  margin-right: 74px
+  &__phone
+    margin-bottom: 6px
+    a
+      margin-left: 10px
+
+.footer-logo
+  +r(lg)
+    padding-bottom: 25px
+    margin-right: 0
+  +r(sm)
+    order: 1
+    width: 100%
+    margin: 0 0 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-right: 82px
+  width: 275px
+  padding-bottom: 5px
+  background: url(../../img/intro/logo.png) no-repeat center
+  &__title
+    display: flex
+    flex-direction: column
+    font-family: $logoFont
+    font-size: 45px
+    text-transform: none
+    font-weight: normal
+    color: $darkTextColor
+    line-height: .56
+    text-align: right
+    margin-bottom: 15px
+    span
+      &:last-child
+        margin-right: 3.5px
+  &__subtitle
+    font-size: 12px
+    text-transform: uppercase
+    font-weight: bold
+
+.footer-address
+  +r(sm)
+    order: 3
+  span
+    display: block
+    text-align: left
+    +r(xxs)
+      text-align: center
+
+.footer-list
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 55px
+  text-align: center
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 8px
+    width: 42px
+    height: 42px
+    border-radius: 50%
+    background-color: $bgGrey
+    &:last-child
+      margin-right: 0
+    a
+      color: #fff
+
+
